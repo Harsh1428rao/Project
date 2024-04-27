@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitMindSchool</title>
+    <!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Optional Bootstrap JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="logo1.png" width="50px">
+    
+   
+    
+   
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+
+}
+/* Variables */
+:root {
+    --main-color: #a759d4;
+    --main-light-color: #a759d4;
+    --container-color: #f8f7fc;
+    --text-color: #1a1d22;
+    --bg-color: #ffffff;
+}
+img{
+    width: 100%;
+}
+body{
+    color: var(--text-color)
+}
+section{
+    padding: 4rem 0 2rem;
+}
+.container{
+    max-width: 938px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    display: block;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.logo img{
+    width: 250px;
+}
+.navbar{
+    display: flex;
+    column-gap: 3rem;
+}
+.navbar a{
+   position: relative;
+   color: var(--text-color);
+   font-size: 1rem;
+   font-weight: 500; 
+}
+.navbar a:hover, 
+.navbar .active {
+    color: var(--main-color);
+}
+.nav-icons{
+    display: flex;
+    column-gap: 1rem;
+}
+.nav-icons .bx {
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.nav-icons .bx:hover {
+    color: var(--main-color);
+}
+#menu-icon{
+    display: none;
+}
+.cart{
+    position: relative;
+}
+.cart span{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -10px;
+    right: -8px;
+    font-size: 0.6rem;
+    height: 15px;
+    width: 15px;
+    background: var(--main-color);
+    border-radius: 50%;
+    padding: 4px;
+    color: var(--bg-color);
+}
+/* Home */
+.home{
+    max-width: 1300px;
+    margin: auto;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background: var(--container-color);
+}
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.home-text h1 {
+    font-size: 2.4rem;
+}
+.home-text p {
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.4rem;
+}
+.btn {
+    padding: 13px 26px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 400;
+    border-radius: 0.5rem;
+}
+.btn:hover {
+    background: var(--main-light-color);
+}
+.heading {
+    text-align: center;
+    margin: 2rem;
+}
+.heading span {
+    border-bottom: 3px solid var(--main-color);
+}
+.featured-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+}
+.featured-container .box{
+    position: relative;
+    padding: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 1px 2px 4px rgb(15 54 55 / 10%);
+}
+.featured-container .box img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    background: var(--container-color);
+    border-radius: 0.5rem;
+}
+
+.featured-container .box img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.featured-container .box .text h2 {
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+.featured-container .box .text a {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+.shop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+}
+.shop-container .box {
+    position: relative;
+    padding: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 1px 2px 4px rgb(15 54 55 / 10%);
+}
+.shop-container .box img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    background: var(--container-color);
+    border-radius: 0.5rem;
+}
+.shop-container .box h2 {
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+.shop-container .box span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.shop-container .box .bx {
+    position: absolute;
+    bottom: 1rem;
+    right: 0.8rem;
+    padding: 10px;
+    font-size: 20px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 0.5rem;
+}
+.shop-container .box .bx:hover{
+    background: var(--main-light-color);
+}
+.newsletter{
+    display: grid;
+    justify-items: center;
+}
+.newsletter form{
+   margin-top: 2rem;
+   display: flex;
+   background: var(--container-color);
+   padding: 10px;
+   border-radius: 0.5rem; 
+}
+.newsletter form .email-box{
+    width: 250px;
+}
+.newsletter form input{
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+.newsletter form .btn{
+    background: var(--main-light-color);
+    color: var(--bg-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.newsletter form .btn:hover {
+    background: var(--main-light-color);
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+   
+}
+.footer .logo {
+    margin-bottom: 0rem;
+}
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+.social {
+    display: flex;
+    align-items: center;
+}
+.social a {
+    font-size: 24px;
+    margin-right: 1rem;
+    color: var(--text-color);
+}
+.social a:hover {
+    transform: translateY(-4px);
+    transition: 0.4s;
+}
+.footer-box h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.footer-box a,
+.footer-box p {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.footer-box a:hover{
+    color: var(--main-color);
+}
+.copyright {
+    padding: 25px;
+    text-align: center;
+}
+/* Google Fonts */
+;
+
+
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="nav container">
+            
+            <a href="#" class="logo">
+                <img src="/home_img/logo1.png" width="50px">
+            </a>
+            
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="https://medlineplus.gov/childrenshealth.html">Health Info</a></li>
+                <li><a href="#shop">Consultant</a></li>
+                <li><a href="assessment_day_to+day.html">Set Goals</a></li>
+            </ul>
+            
+            <div class="nav-icons">
+                <a href="login.html" class="user"><i class='bx bxs-user'></i></a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="home" id="home">
+       
+        <div class="home-container container">
+            <div class="home-text">
+                <h1>We've reimagined the Healthy life for you<br>FitMindSchool</h1>
+                
+                <br>
+                <a href="Signup.html" class="btn">Sign Up</a>
+            </div>
+            
+            <div class="home-img">
+                <img src="/home_img/home1.jpg" alt="#" width="500px" height="400px">
+            </div>
+        </div>
+    </section>
+    
+    <section class="featured" id="featured">
+        
+        
+           
+        <div class="heading">
+            <h2><span>Wellness is Key to Good Life</span></h2>
+        </div>
+        <div class="featured-container container">
+            
+            <div class="box">
+               
+                <div class="text">
+                    <img src="/web/mental.avif" alt=""></a>
+                    <br>
+                    <h2>Mentall Wellness</h2>
+    
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="text">
+                    
+                
+                <img src="/web/physical.jpg" alt="">
+                <br>
+                <h2>Physical Wellness</h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="text">
+                
+            
+            <img src="/web/intell.jpg" alt="">
+            <br>
+            <h2>Intellectual Wellness</h2>
+        </div>
+    </section>
+    
+    <section class="shop" id="shop">
+        <div class="heading">
+            <h2><span>A Good lifestyle Now</span></h2>
+        </div>
+        
+        <div class="shop-container container">
+            <div class="box">
+                <img src="./lifestyle_img/sports.png"alt="">
+                <h2><center>Sports</center></h2>
+                
+            </div>
+            <div class="box">
+                <img src="./lifestyle_img/reading.avif" alt="">
+                <h2><center>Reading</center></h2>
+               
+            </div>
+            <div class="box">
+                <img src="./lifestyle_img/freinds.png" alt="">
+                <h2><center>Freinds</center></h2>
+                
+            </div>
+            <div class="box">
+                <img src="./lifestyle_img/commu.avif" alt="">
+                <h2>Communication</h2>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="new" id="new">
+        <div class="heading">
+            <h2><span>Empower Your Health and Lifestyle</span></h2>
+        </div>
+        <!-- Shop Content -->
+        <div class="shop-container container">
+            <div class="box">
+                <img src="./Empower_img/healthCha.jpg" alt="">
+                <br>
+                <h2><center>Health Challenges</center></h2>
+                
+            </div>
+            <div class="box">
+                <img src="./Empower_img/lifestyle.png" alt="">
+                <br>
+                <h2><center>Lifestyle Quizzes</center></h2>
+                
+            </div>
+            <div class="box">
+                <img src="./Empower_img/wellness.avif" alt="">
+                <br>
+                <h2><center>Wellness Topics</center></h2>
+                
+            </div>
+            
+    </section>
+    
+    
+    
+    
+    
+    
+    <section class="footer container">
+        <div class="footer-box">
+            
+            <a href="#" class="logo">
+                <img src="./home_img/logo1.png" alt="">
+            </a>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-youtube' ></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Pages</h3>
+            <a href="#home">Home</a>
+            <a href="#featured">Health Plans</a>
+            <a href="#shop">Consultant</a>
+            <a href="#new">Solutions</a>
+        </div>
+        <div class="footer-box">
+            <h3>Legal</h3>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Refund Policy</a>
+            <a href="#">Terms Of Use</a>
+            <a href="#">Disclaimer</a>
+        </div>
+        <div class="footer-box">
+            <h3>Branches</h3>
+            <p>Delhi</p>
+            <p>Lucknow</p>
+            <p>Pune</p>
+            <p>Patna</p>
+        </div>
+    </section>
+    
+    <div class="copyright">
+        <p>&#169; FitMindSchool All Rights Reserved.</p>
+    </div>
+</body>
+</html>
