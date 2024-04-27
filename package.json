@@ -2,7 +2,7 @@
   "name": "project",
   "version": "1.0.0",
   "description": "web development Project",
-  "main": "index.js",
+  "main": "app1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
