@@ -3,6 +3,7 @@ const path = require("path");
 const body1 = require('body-parser');
 const Student1 = require("./connect");
 const encoded = body1.urlencoded({extended:false});
+require('dotenv').config();
 
 const app = express();
 

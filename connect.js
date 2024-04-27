@@ -1,6 +1,8 @@
 const mongoose=require("mongoose");
+require('dotenv').config();
 
-mongoose.connect("mongodb://127.0.0.1:27017/MERN")
+const mongoURI=process.env.MONGO_URI;
+mongoose.connect(mongoURI)
 .then(()=>{
     console.log("Connection succesful");
 }).catch((err)=>{
