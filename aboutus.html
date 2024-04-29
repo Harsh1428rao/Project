@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | MediCARE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4d8eafe2;
+            padding: 10px 0;
+        }
+
+        .logo img {
+            max-width: 200px;
+            border: 1px solid #ddd;
+          border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+        margin-left: 7px;
+        margin-top: 7px;
+        }
+
+        .navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 10px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #bdcfe3;
+        }
+
+        .about {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #007bff;
+            font-family: 'Times New Roman', Times, serif;
+font-size: 30px;
+        }
+        .about p{
+            font-family: 'Times New Roman', Times, serif;
+font-size: 15px;
+        }
+
+        .team {
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .team h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .team-member {
+            /* display: inline-block; */
+            margin: 0 20px;
+            vertical-align: top;
+            position: relative;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        .member-details {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            margin-top: 150px;
+        }
+
+        .team-member:hover .member-details {
+            opacity: 1;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./home_img/logo1.png" alt="logo">
+            </a>
+            <ul class="navbar">
+                <li><a href="./homepage.html">Home</a></li>
+                <li><a href="#">Health Info</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h2><b>About Us</b></h2>
+                    <p>Welcome to FitMindSchool, your trusted partner in children's healthcare. We are dedicated to nurturing the health and well-being of young minds and bodies.</p>
+<p>At FitMindSchool, our mission is to provide comprehensive and compassionate healthcare services specifically designed for the unique needs of young children. We believe every child deserves access to the best possible care, regardless of their background or financial circumstances.</p>
+<p>Our team of experienced healthcare professionals is committed to putting the health and happiness of your child first. We understand the importance of early intervention and preventative care in laying the foundation for a lifetime of well-being.</p>
+<p>Through a combination of specialized medical expertise and a nurturing environment, we aim to make a positive impact on the health and development of our young patients. From routine check-ups to specialized pediatric care, we're here to support you every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h2><b>Our Team</b></h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="./home_img/Harsh_Rao.png" alt="Team Member 1" class="img-fluid">
+                        <div class="member-details">
+                            <h3>Mr. Harsh Rao</h3>
+                            <p>Founder & CEO</p>
+                            <p>Mr. Harsh Rao is the visionary leader and driving force behind FitMindSchool.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="./home_img/ayush.jpeg" alt="Team Member 2" class="img-fluid">
+                        <div class="member-details">
+                            <h3>Mr. Ayush Rao</h3>
+                            <p>Co-Founder & COO<br>
+                            As the COO of FitMindSchool, Mr. Harsh Rao oversees the day-to-day operations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="./home_img/madhav.jpeg" alt="Team Member 3" class="img-fluid">
+                        <div class="member-details">
+                            <h3>Mr. Madhav</h3>
+                            <p>Co-Founder & CTO<br>
+                            Mr.Madhav Verma leads the technological development at FitMindSchool.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&#169; 2024 FitMindSchool. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('header').hover(function() {
+                $(this).css('background-color', '#0056b3');
+            }, function() {
+                $(this).css('background-color', '#82addc');
+            });
+        });
+    </script>
+</body>
+</html>
