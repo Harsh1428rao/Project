@@ -62,5 +62,5 @@ We welcome contributions from the community! If you're interested in contributin
 
 ## Contact
 
-For any questions or inquiries, please contact [Your Name](mailto:hrao1428@gmail.com).
+For any questions or inquiries, please contact [Harsh Rao](mailto:hrao1428@gmail.com).
 
